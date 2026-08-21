@@ -1,0 +1,66 @@
+---
+// Módulo de Arsenal / Stack Tecnológico
+const categorias = [
+    {
+        nombre: "Backend & Arquitectura",
+        skills: ["Python", "Django", "FastAPI", "PostgreSQL"],
+    },
+    {
+        nombre: "Inteligencia Artificial",
+        skills: [
+            "LangGraph",
+            "Gemini API",
+            "Sistemas RAG",
+            "Prompt Engineering",
+        ],
+    },
+    {
+        nombre: "Frontend Modular",
+        skills: ["Astro", "HTMX", "Tailwind CSS", "Alpine.js"],
+    },
+    {
+        nombre: "Sistemas & Entorno",
+        skills: ["Linux", "Docker", "Git", "Bash Scripting"],
+    },
+];
+---
+
+<section class="py-20 px-6 bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto w-full">
+        <h2 class="text-3xl font-bold text-gray-900 mb-10">
+            Arsenal Tecnológico
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {
+                categorias.map((categoria) => (
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-800 border-b border-gray-200 pb-2">
+                            {categoria.nombre}
+                        </h3>
+                        <ul class="space-y-2">
+                            {categoria.skills.map((skill) => (
+                                <li class="flex items-center text-gray-600">
+                                    <svg
+                                        class="w-4 h-4 mr-2 text-black"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                    {skill}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section id="portafolio" class="py-20 px-6 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">
+                Proyectos Destacados
+            </h2>
+            <p class="text-gray-600 mt-2">
+                Aplicando arquitecturas limpias y motores de inteligencia
+                artificial.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Instancia 1 -->
+            <ProjectCard
+                titulo="Motor RAG de Análisis Jurisprudencial"
+                descripcion="Agentes inteligentes y grafos de ejecución para el análisis y procesamiento de documentos legales."
+                tecnologias={["Python", "Django", "LangGraph", "Gemini API"]}
+            />
+
+            <!-- Instancia 2 -->
+            <ProjectCard
+                titulo="Plataformas LegalTech Modulares"
+                descripcion="Arquitectura backend escalable diseñada para la automatización de flujos de trabajo legales e integración de modelos de lenguaje."
+                tecnologias={["PostgreSQL", "Docker", "HTMX", "FastAPI"]}
+            />
+
+            <!-- Instancia 3 -->
+            <ProjectCard
+                titulo="Automatización de Extracción de Datos"
+                descripcion="Pipelines de ingesta documental que transforman texto no estructurado en variables JSON listas para consumo estructurado."
+                tecnologias={["Python Scripts", "LLM Parsing", "REST APIs"]}
+            />
+        </div>
+    </div>
+</section>
